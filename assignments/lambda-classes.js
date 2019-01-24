@@ -1,4 +1,7 @@
 // CODE here for your Lambda Classes
+
+// Classes
+
 class Person {
     constructor(person) {
         this.name = person.name;
@@ -45,3 +48,22 @@ class Student extends Person {
         console.log(`${this.name} has begun sprint challenge on ${subject}`);
     }
 }
+
+
+class ProjectManager extends Instructor {
+    constructor(pManager) {
+        super(pManager);
+        this.gradClassName = pManager.gradClassName;
+        this.favInstructor = pManager.favInstructor;
+    }
+    standUp(channel) {
+        console.log(`${this.name} announces to ${channel}, @channel standy times!`);
+    }
+    debugsCode(student, subject) {
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
+    }
+}
+
+
+// Object constructors
+
