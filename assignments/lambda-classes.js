@@ -67,3 +67,123 @@ class ProjectManager extends Instructor {
 
 // Object constructors
 
+const joe = new Person ({
+    name: "Joe",
+    age: 33,
+    location: "Plainsville",
+    gender: "M"
+});
+
+const jane = new Person ({
+    name: "Jane",
+    age: 23,
+    location: "Bettersville",
+    gender: "F"
+});
+
+const wake = new Person ({
+    name: "Xander Wake",
+    age: 12,
+    location: "Avalon",
+    gender: "M"
+});
+
+
+const schlakk = new Instructor ({
+    name: "Schlakk Masterson",
+    age: 38,
+    location: "Silicon Valley",
+    gender: "M",
+    specialty: "Javascript",
+    favLanguage: "Javascript",
+    catchPhrase: "Can you dig it!"
+})
+
+const aristotle = new Instructor ({
+    name: "Aristotle",
+    age: 2403,
+    location: "Greece",
+    gender: "M",
+    specialty: "Philosophy",
+    favLanguage: "Cuneiform",
+    catchPhrase: "Plato had narcolepsy"
+});
+
+const einstein = new Instructor ({
+    name: "Albert",
+    age: 140,
+    location: "Nevada",
+    gender: "M",
+    specialty: "Physics",
+    favLanguage: "C++",
+    catchPhrase: "You stick your tongue out once...you'll never live it down."
+});
+
+
+const wood = new Student ({
+    name: "Joshua",
+    age: 39,
+    location: "California",
+    gender: "M",
+    previousBackground: "Object-Oriented Programming",
+    className: "Full-Stack Web Dev",
+    favSubjects: ["Coding", "Music", "Gaming"]
+});
+
+const shady = new Student ({
+    name: "Slim",
+    age: 36,
+    location: "Compton",
+    gender: "M",
+    previousBackground: "Rapper",
+    className: "iOS",
+    favSubjects: ["Rhythm", "Rhyme", "Realism"]
+})
+
+const baggins = new Student ({
+    name: "Bilbo",
+    age: 24,
+    location: "The Shire",
+    gender: "M",
+    previousBackground: "Simple Hobbit",
+    className: "Android",
+    favSubjects: ["Loops, Rings, Circles"]
+});
+
+
+const banner = new ProjectManager ({
+    name: "Bruce",
+    age: 41,
+    location: "Earth",
+    gender: "M",
+    specialty: "Smash",
+    favLanguage: "Bash",
+    catchPhrase: "I am now only sometimes angry.",
+    gradClassName: "WEB17",
+    favInstructor: "Schlakk Masterson"
+});
+
+const widow = new ProjectManager ({
+    name: "Black",
+    age: 38,
+    location: "S.H.I.E.L.D.",
+    gender: "F",
+    specialty: "Martial Arts",
+    favLanguage: "Russian",
+    catchPhrase: "-None-Her fists do the talking.",
+    gradClassName: "WEB17",
+    favInstructor: "Aristotle"
+});
+
+const witch = new ProjectManager ({
+    name: "Witch",
+    age: 37,
+    location: "Dustville",
+    gender: "F",
+    specialty: "Reality Manipulation",
+    favLanguage: "Ruby",
+    catchPhrase: "I can't believe Thanos killed Visi'`'~,.,~'`'~",
+    gradClassName: "WEB17",
+    favInstructor: "Einstein"
+});
+
