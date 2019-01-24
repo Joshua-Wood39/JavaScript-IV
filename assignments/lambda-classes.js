@@ -28,6 +28,11 @@ class Instructor extends Person {
     grade(student, subject) {
         console.log(`${student.name} receives a perfect score on ${subject}`);
     }
+    checkWork(student) {
+        let min = Math.ceil(-10);
+        let max = Math.floor(11);
+        console.log(`${this.name} changed ${student.name}'s grade to ${student.grade + (Math.floor(Math.random()*(max - min + 1) + min))}`);
+    }
 }
 
 
@@ -37,6 +42,7 @@ class Student extends Person {
         this.previousBackground = student.previousBackground;
         this.className = student.className;
         this.favSubjects = student.favSubjects;
+        this.grade = student.grade;
     }
     listsSubjects() {
         console.log(`${this.favSubjects}`);
@@ -46,6 +52,13 @@ class Student extends Person {
     }
     sprintChallenge(subject) {
         console.log(`${this.name} has begun sprint challenge on ${subject}`);
+    }
+    graduate(student) {
+        if (student.grade > 70) {
+            return `Congratulations, ${student.name}! You have graduated!`
+        } else {
+            return `Sorry, ${student.name}...but you need further studying.`
+        }
     }
 }
 
@@ -127,7 +140,8 @@ const wood = new Student ({
     gender: "M",
     previousBackground: "Object-Oriented Programming",
     className: "Full-Stack Web Dev",
-    favSubjects: ["Coding", "Music", "Gaming"]
+    favSubjects: ["Coding", "Music", "Gaming"],
+    grade: 100
 });
 
 const shady = new Student ({
@@ -137,7 +151,8 @@ const shady = new Student ({
     gender: "M",
     previousBackground: "Rapper",
     className: "iOS",
-    favSubjects: ["Rhythm", "Rhyme", "Realism"]
+    favSubjects: ["Rhythm", "Rhyme", "Realism"],
+    grade: 99
 })
 
 const baggins = new Student ({
@@ -147,7 +162,8 @@ const baggins = new Student ({
     gender: "M",
     previousBackground: "Simple Hobbit",
     className: "Android",
-    favSubjects: ["Loops, Rings, Circles"]
+    favSubjects: ["Loops, Rings, Circles"],
+    grade: 0
 });
 
 
@@ -187,3 +203,13 @@ const witch = new ProjectManager ({
     favInstructor: "Einstein"
 });
 
+console.log(einstein.checkWork(baggins));
+console.log(einstein.checkWork(baggins));
+console.log(einstein.checkWork(baggins));
+console.log(einstein.checkWork(baggins));
+console.log(einstein.checkWork(baggins));
+console.log(einstein.checkWork(baggins));
+console.log(einstein.checkWork(baggins));
+
+console.log(wood.graduate(wood));
+console.log(baggins.graduate(baggins));
